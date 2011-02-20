@@ -1,0 +1,51 @@
+<HTML>
+<head><title>No music</title>
+
+<SCRIPT language="JavaScript">
+<!--
+function start_it() {
+ document.game.clickStart();
+}
+
+function choose(s) {
+ document.game.chosenCity(s);
+}
+
+function cheat() {
+ document.game.clickCheat();
+}
+
+function chosen_cheat(s) {
+ document.game.chosenCheat(s);
+}
+
+function map() {
+ document.game.clickMap();
+}
+//-->
+
+</SCRIPT>
+
+
+</head>
+<body bgcolor="#FFFFFF">
+
+<map name="buttons">
+<area shape="RECT" coords="149,21,183,37" href="JavaScript:start_it();" alt="Play">
+<area shape="RECT" coords="97,29,127,40" href="JavaScript:map();" alt="Map">
+<area shape="CIRCLE" coords="232,50,17" href="JavaScript:cheat();" alt="Cheat">
+<area shape="RECT" coords="1,21,45,34" href="midi.html" target="dummy" alt="MIDI">
+<area shape="RECT" coords="3,41,46,55" href="mod.html" target="dummy" alt="MOD">
+<area shape="RECT" coords="7,61,52,75" href="sid.html" target="dummy" alt="SID">
+<area shape="RECT" coords="18,81,59,95" href="none.html" target="dummy" alt="None">
+</map>
+
+<table width=286 border=0 cellpadding=0 cellspacing=0>
+<tr><td colspan=3><img src="tpan1a.gif" width=286 height=16></td></tr>
+<tr><td><img src="tpan1b.gif" width=27 height=263></td>
+<td><applet code="wnoids.class" width=240 height=263 name="game"></applet></td>
+<td><img src="tpan1d.gif" width=19 height=263></td></tr>
+<tr><td colspan=3><img src="tpan1e.gif" border=0 width=286 height=103 usemap="#buttons"></td></tr>
+</table>
+</body>
+</HTML>

@@ -1,0 +1,80 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>om mig</title>
+<script language="JavaScript">
+<!--
+function shutdown()
+{
+top.window.close() ;
+}
+//-->
+</script>
+<SCRIPT TYPE="text/javascript" language="JavaScript">
+<!--
+var browserok=false;
+//-->
+</script>
+<SCRIPT TYPE="text/javascript" language="JavaScript1.1">
+<!--
+var browserok=true;
+//-->
+</script>
+<SCRIPT TYPE="text/javascript" language="JavaScript">
+<!--
+var imageList=new Array();
+var imageCount=0;
+function loadImage(name,imageOut,imageOn){
+if (browserok){
+imageList[imageCount]=new Array(3);
+imageList[imageCount][0]=name;
+imageList[imageCount][1]=new Image();
+imageList[imageCount][1].src=imageOut;
+imageList[imageCount][2]=new Image();
+imageList[imageCount][2].src=imageOn;
+imageCount++;
+}
+}
+function gotFocus(name){
+if (browserok){
+for (var i=0; i < imageList.length; i++){
+if(imageList[i][0] == name){
+document.images[name].src= imageList[i][2].src;
+break;
+}
+}
+}
+}
+function lostFocus(name){
+if (browserok){
+for (var i=0; i < imageList.length; i++){
+if(imageList[i][0] == name){
+document.images[name].src= imageList[i][1].src;
+break;
+}
+}
+}
+}
+loadImage("stang","bilder/stang1.gif","bilder/stang2.gif");
+//-->
+</script>
+<bgsound loop="1" src="johan.wav">
+<link rel=stylesheet href="hemsida.css" type="text/css">
+</head>
+<body text="#6F6F6F" bgcolor="#FFFFFF">
+<div align=center>
+<h1 class=vanlig><b>om mig</b></h1>
+<table cellspacing="5" cellpadding="0" border="0">
+<tr>
+<td width="175" bgcolor="#075075" align="center" height="220"><h1 class=vanlig>BILD KOMMER!</h1></td>
+<td width="175" bgcolor="#075075" align="center" height="220"><h1 class=vanlig>BILD KOMMER!</h1></td>
+<td width="175" bgcolor="#075075" align="center" height="220"><h1 class=vanlig>BILD KOMMER!</h1></td>
+</tr>
+</table>
+<h1 class=mellan>Jag heter Johan och är född 8 Oktober 1988. På morgonen klockan fyra och fyrtio-fyra. Alltså är jag 13 år nu. Jag har har en bror och en syster. Jag är störst utav dem. Jag har glasögon. Jag fick dem i Maj/Juni 1999. Sen dess har jag bytt båge en gång och jag tycker det är rätt snyggt att ha glasögon. På fritiden spelar jag fotboll och bandy, jag surfar, spelar spel, lyssnar på musik och är med kompisar och familj. Jag har skilda föräldrar sen Oktober 1998. Jag och mina syskon bor hos båda lika mycket, oftast en vecka hos vardera.<br><br>Ja, det tror jag väl va' lite kortfattat om mig. Så nu vet ni vem jag är...</h1>
+<br>
+<a href="javascript:shutdown();" onMouseOver="gotFocus('stang'); window.status=''; return true" onMouseOut="lostFocus('stang')">
+<img src="bilder/stang1.gif" width=115 height=40 border=0 name="stang"></a>
+</div>
+</body>
+</html>

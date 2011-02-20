@@ -1,0 +1,88 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>kontakta</title>
+<script language="JavaScript">
+<!--
+function shutdown()
+{
+top.window.close() ;
+}
+//-->
+</script>
+<SCRIPT TYPE="text/javascript" language="JavaScript">
+<!--
+var browserok=false;
+//-->
+</script>
+<SCRIPT TYPE="text/javascript" language="JavaScript1.1">
+<!--
+var browserok=true;
+//-->
+</script>
+<SCRIPT TYPE="text/javascript" language="JavaScript">
+<!--
+var imageList=new Array();
+var imageCount=0;
+function loadImage(name,imageOut,imageOn){
+if (browserok){
+imageList[imageCount]=new Array(3);
+imageList[imageCount][0]=name;
+imageList[imageCount][1]=new Image();
+imageList[imageCount][1].src=imageOut;
+imageList[imageCount][2]=new Image();
+imageList[imageCount][2].src=imageOn;
+imageCount++;
+}
+}
+function gotFocus(name){
+if (browserok){
+for (var i=0; i < imageList.length; i++){
+if(imageList[i][0] == name){
+document.images[name].src= imageList[i][2].src;
+break;
+}
+}
+}
+}
+function lostFocus(name){
+if (browserok){
+for (var i=0; i < imageList.length; i++){
+if(imageList[i][0] == name){
+document.images[name].src= imageList[i][1].src;
+break;
+}
+}
+}
+}
+loadImage("stang","bilder/stang1.gif","bilder/stang2.gif");
+//-->
+</script>
+<link rel=stylesheet href="hemsida.css" type="text/css">
+</head>
+<body text="#6F6F6F" bgcolor="#FFFFFF">
+<div align=center>
+<h1 class=vanlig><b>kontakta</b></h1>
+<h1 class=mellan>Här kan du mejla mej i det här "formuläret". Jag vill helst bara ha "seriösa" mejl. Alltså inga mejl där det står t.ex. "Hej! Jag tycker du är helt *pip* dum i huvudet". Klicka på min mejl-adress för att skicka ett mejl på vanligt sett.<br>Min mejl är: <a href="mailto:johan_lunds@hotmail.com?subject=Mejl från johan-l!">johan_lunds@hotmail.com</a></h1>
+<form method="POST" action="http://www.olzzon.com/cgi-bin/p.cgi?epost=johan_lunds@hotmail.com&id=1">
+
+<input typ="text" name="fran_namn" size="30" maxlength="90" style="font-family: Verdana; font-size: 8pt; background-color: #075075; border-color: #6F6F6F; border-style: solid; border-width: 1" value="namn">
+<br>
+<input type="text" name="fran_epost" size="30" maxlength="90" style="font-family: Verdana; font-size: 8pt; background-color: #075075; border-color: #6F6F6F; border-style: solid; border-width: 1" value="mejl">
+<br>
+<input type="text" name="amne" size="30" maxlength="60" style="font-family: Verdana; font-size: 8pt; background-color: #075075; border-color: #6F6F6F; border-style: solid; border-width: 1" value="ämne">
+<br>
+<textarea name="text" wrap="virtual" rows="10" cols="40" style="font-family: Verdana; font-size: 8pt; background-color: #075075; border-color: #6F6F6F; border-style: solid; border-width: 1">meddelande...</textarea>
+<br>
+<input type="submit" name="Skicka" value="Skicka" style="font-family: Verdana; font-size: 8pt; background-color: #075075; border-color: #6F6F6F; border-style: solid; border-width: 1">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="reset" name="Nollställ" value="Nollställ" style="font-family: Verdana; font-size: 8pt; background-color: #075075; border-color: #6F6F6F; border-style: solid; border-width: 1">
+</form>
+<br>
+<h1 class=mellan>Tack för ditt mejl! Jag kommer svara så fort jag kan.</h1>
+<br>
+<a href="javascript:shutdown();" onMouseOver="gotFocus('stang'); window.status=''; return true" onMouseOut="lostFocus('stang')">
+<img src="bilder/stang1.gif" width=115 height=40 border=0 name="stang"></a>
+</div>
+</body>
+</html>

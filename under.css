@@ -1,0 +1,8 @@
+body { background-color: #075075 }
+h1.vanlig { font: 9pt "Verdana"; color: #6F6F6F }
+h1.mellan { font: 8pt "Verdana"; color: #6F6F6F }
+h1.liten { font: 7pt "Verdana"; color: #6F6F6F }
+A:hover { color: #6F6F6F; text-decoration:none }
+a:link { color: #000000; text-decoration:none }
+a:visited {color: #000000; text-decoration:none }
+a:active {color: #000000; text-decoration:none }
